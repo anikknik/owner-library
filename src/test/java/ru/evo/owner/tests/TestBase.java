@@ -21,11 +21,11 @@ public class TestBase {
         }
 
 
-        String baseUrlString = System.getProperty("baseUrl");
-        if (Objects.isNull(baseUrlString)) {
-            baseUrlString = "https://github.com";
+        String baseUrl = System.getProperty("baseUrl");
+        if (Objects.isNull(baseUrl)) {
+            baseUrl = "https://github.com";
         }
-        open(baseUrlString);
+        open(baseUrl);
 
     }
 

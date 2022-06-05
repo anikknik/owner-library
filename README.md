@@ -1,12 +1,8 @@
-Локальный запуск:
-gradle clean test --tests WebTest -Dconfig-test==local
-
-Удаленный запуск:
-gradle clean test --tests WebTest -Dconfig-test=remote
+Запуск веб-тестов:
+./gradlew clean test --tests WebTest -Dconfig-test=local // локальные настройки
+./gradlew clean test --tests WebTest -Dconfig-test=remote // удалённые настройки
 
 
-Запуск api теста используя системные свойства:
-gradle clean test --tests ApiTest -DbaseUrl= -DbearerToken=
-
-Классический запуск api теста:
-gradle clean test --tests ApiTest
+Запуск api тестов:
+./gradlew clean test --tests ApiTest -DbaseUrl=https://github.com -DbearerToken=eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJINHNJQUFBQUFBQUFc // с настройками из команды
+./gradlew clean test --tests ApiTest // с настройками из файла 

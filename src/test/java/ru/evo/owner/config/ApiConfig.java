@@ -12,6 +12,6 @@ public interface ApiConfig extends Config {
     @Key("baseUrl")
     String baseUrl();
 
-    @Key("token")
+    @Key("bearerToken")
     String bearerToken();
 }
